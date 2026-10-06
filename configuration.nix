@@ -52,12 +52,18 @@
     description = "Damian";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      spotify
+      discord
+    ];
   };
   
   # Fonts
   fonts.packages = with pkgs; [ noto-fonts noto-fonts-color-emoji nerd-fonts.jetbrains-mono ];
-  
+
+  # Force Electron-Apps to use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Gaming
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
