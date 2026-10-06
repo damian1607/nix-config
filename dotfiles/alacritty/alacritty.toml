@@ -1,0 +1,35 @@
+# Colors come from DankMaterialShell (generated from the wallpaper).
+# The file appears after the first wallpaper or theme change.
+[general]
+import = [
+    "~/.config/alacritty/dank-theme.toml"
+]
+
+[window]
+opacity = 0.85
+decorations = "None"
+dynamic_padding = true
+
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[scrolling]
+history = 10000
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true

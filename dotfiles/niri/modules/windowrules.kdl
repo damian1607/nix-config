@@ -1,0 +1,6 @@
+// Zen-Browser: Bild-in-Bild-Fenster schwebend oeffnen.
+// Der Regex "zen" passt auf native und Flatpak-App-ID.
+window-rule {
+    match app-id=r#"zen"# title="^Picture-in-Picture$"
+    open-floating true
+}
