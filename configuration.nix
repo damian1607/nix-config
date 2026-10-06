@@ -122,6 +122,7 @@
     prismlauncher
     heroic
     bibata-cursors
+    xwayland-satellite
   ];
 
   # Zram Swap
