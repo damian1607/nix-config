@@ -52,11 +52,25 @@
     description = "Damian";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      spotify
+      discord
+    ];
   };
   
   # Fonts
   fonts.packages = with pkgs; [ noto-fonts noto-fonts-color-emoji nerd-fonts.jetbrains-mono ];
+
+  # Font fallback order
+  fonts.fontconfig.defaultFonts = {
+    monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+    sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+    serif = [ "Noto Serif" "Noto Color Emoji" ];
+    emoji = [ "Noto Color Emoji" ];
+  };
+
+  # Force Electron-Apps to use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   # Gaming
   programs.steam.enable = true;
@@ -109,6 +123,7 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     git
+    gh
     alacritty
     fastfetch
     nautilus
@@ -122,6 +137,7 @@
     prismlauncher
     heroic
     bibata-cursors
+    xwayland-satellite
   ];
 
   # Zram Swap
