@@ -1,14 +1,7 @@
 { config, pkgs, ... }:
 
-let
-  home-manager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
-  };
-in
 {
-  imports = [
-    (import "${home-manager}/nixos")
-  ];
+  imports = [ <home-manager/nixos> ];
 
   home-manager = {
     useGlobalPkgs = true;
@@ -30,6 +23,20 @@ in
         createDirectories = true;
         templates = null;    # don't need these two
         publicShare = null;
+      };
+      # Default apps
+      xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+          "image/png" = "org.gnome.Loupe.desktop";
+          "image/jpeg" = "org.gnome.Loupe.desktop";
+          "image/webp" = "org.gnome.Loupe.desktop";
+          "image/gif" = "org.gnome.Loupe.desktop";
+          "video/mp4" = "io.github.celluloid_player.Celluloid.desktop";
+          "video/x-matroska" = "io.github.celluloid_player.Celluloid.desktop";
+          "application/pdf" = "org.gnome.Papers.desktop";
+          "inode/directory" = "org.gnome.Nautilus.desktop";
+        };
       };
     };
   };

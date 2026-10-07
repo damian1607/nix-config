@@ -1,3 +1,7 @@
 // General
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
+// Don't show the hotkey overlay on login
+hotkey-overlay {
+    skip-at-startup
+}

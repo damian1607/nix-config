@@ -50,7 +50,7 @@
   users.users."damian" = {
     isNormalUser = true;
     description = "Damian";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       spotify
@@ -139,6 +139,8 @@
     bibata-cursors
     xwayland-satellite
     adwaita-icon-theme
+    ffmpegthumbnailer
+    loupe
   ];
 
   # Zram Swap
