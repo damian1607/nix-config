@@ -24,6 +24,13 @@ in
         "fish/config.fish".source = ./dotfiles/fish/config.fish;
         "alacritty/alacritty.toml".source = ./dotfiles/alacritty/alacritty.toml;
       };
+      # XDG user directories
+      xdg.userDirs = {
+        enable = true;
+        createDirectories = true;
+        templates = null;    # don't need these two
+        publicShare = null;
+      };
     };
   };
 }

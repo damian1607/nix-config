@@ -138,6 +138,7 @@
     heroic
     bibata-cursors
     xwayland-satellite
+    adwaita-icon-theme
   ];
 
   # Zram Swap
