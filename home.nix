@@ -11,6 +11,13 @@
     users.damian = {
       home.stateVersion = "26.05";
 
+      # Cursor theme in ~/.icons, incl. ~/.icons/default for X11 apps
+      home.pointerCursor = {
+        package = pkgs.bibata-cursors;
+        name = "Bibata-Modern-Classic";
+        size = 20;
+      };
+
       xdg.configFile = {
         "niri/config.kdl".source = ./dotfiles/niri/config.kdl;
         "niri/modules".source = ./dotfiles/niri/modules;

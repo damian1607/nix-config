@@ -71,6 +71,10 @@
 
   # Force Electron-Apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # Cursor for X11 apps (Steam etc. via xwayland-satellite)
+  environment.sessionVariables.XCURSOR_THEME = "Bibata-Modern-Classic";
+  environment.sessionVariables.XCURSOR_SIZE = "20";
   
   # Gaming
   programs.steam.enable = true;
