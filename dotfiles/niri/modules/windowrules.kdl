@@ -14,3 +14,10 @@ window-rule {
     open-floating true
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
+// Blur behind Zen's transparent UI
+window-rule {
+    match app-id=r#"^app\.zen_browser\.zen$"#
+    background-effect {
+        blur true
+    }
+}
