@@ -14,8 +14,13 @@
       # Cursor theme in ~/.icons, incl. ~/.icons/default for X11 apps
       home.pointerCursor = {
         package = pkgs.bibata-cursors;
-        name = "Bibata-Modern-Classic";
-        size = 20;
+        name = "capitaine-cursors";
+        size = 24;
+      };
+      # Cursor for GTK apps
+      dconf.settings."org/gnome/desktop/interface" = {
+        cursor-theme = "capitaine-cursors";
+        cursor-size = 24;
       };
 
       xdg.configFile = {

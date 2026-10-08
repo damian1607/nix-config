@@ -72,9 +72,10 @@
   # Force Electron-Apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # Cursor for X11 apps (Steam etc. via xwayland-satellite)
-  environment.sessionVariables.XCURSOR_THEME = "Bibata-Modern-Classic";
-  environment.sessionVariables.XCURSOR_SIZE = "20";
+  # Cursor for X11 apps (via xwayland-satellite), taken from home.pointerCursor in home.nix.
+  # The DMS cursor setting still has to be changed by hand.
+  environment.sessionVariables.XCURSOR_THEME = config.home-manager.users.damian.home.pointerCursor.name;
+  environment.sessionVariables.XCURSOR_SIZE = toString config.home-manager.users.damian.home.pointerCursor.size;
   
   # Gaming
   programs.steam.enable = true;
@@ -140,11 +141,11 @@
     mangojuice
     prismlauncher
     heroic
-    bibata-cursors
     xwayland-satellite
     adwaita-icon-theme
     ffmpegthumbnailer
     loupe
+    capitaine-cursors
   ];
 
   # Zram Swap
