@@ -1,6 +1,16 @@
-// Zen-Browser: Bild-in-Bild-Fenster schwebend oeffnen.
-// Der Regex "zen" passt auf native und Flatpak-App-ID.
+// Zen PiP floating
 window-rule {
     match app-id=r#"zen"# title="^Picture-in-Picture$"
     open-floating true
+}
+// Steam friends list floats instead of tiling
+window-rule {
+    match app-id="^steam$" title="^Friends List$"
+    open-floating true
+}
+// Steam notification toasts float in the bottom-right corner
+window-rule {
+    match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
+    open-floating true
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
