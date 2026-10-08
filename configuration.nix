@@ -55,6 +55,7 @@
     packages = with pkgs; [
       spotify
       discord
+      plex-desktop
     ];
   };
   

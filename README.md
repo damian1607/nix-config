@@ -153,9 +153,7 @@ sudo git add -A && sudo git commit -m "..." && sudo git push
 
 ## ❯ Roadmap
 
-- [ ] Finish theming: GTK and Zen through DMS
-- [ ] Monitor setup as its own niri module
-- [ ] Declarative Flatpaks with nix-flatpak
+- [ ] Zen as native nix-pkg
 - [ ] Move to flakes
 
 ## ❯ Credits
