@@ -13,7 +13,7 @@
 
       # Cursor theme in ~/.icons, incl. ~/.icons/default for X11 apps
       home.pointerCursor = {
-        package = pkgs.bibata-cursors;
+        package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
         size = 24;
       };

@@ -54,7 +54,7 @@
     shell = pkgs.fish;
     packages = with pkgs; [
       spotify
-      discord
+      (discord.override { withVencord = true; })
       plex-desktop
     ];
   };
