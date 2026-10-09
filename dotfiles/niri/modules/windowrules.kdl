@@ -26,3 +26,10 @@ layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
 }
+// Only show the focus ring on the window that actually has keyboard focus
+window-rule {
+    match is-focused=false
+    focus-ring {
+        off
+    }
+}
