@@ -88,6 +88,9 @@
   hardware.graphics.enable32Bit = true;
   hardware.enableRedistributableFirmware = true;
 
+  # German keyboard layout inside gamescope (it defaults to US)
+  environment.sessionVariables.XKB_DEFAULT_LAYOUT = "de";
+
   # Flatpak Support
   services.flatpak.enable = true;
 
