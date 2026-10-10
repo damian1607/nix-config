@@ -115,12 +115,6 @@
       enable = true;
       restartIfChanged = true;
     };
-
-    enableSystemMonitoring = true;
-    enableVPN = false;
-    enableDynamicTheming = true;
-    enableAudioWavelength = true;
-    enableCalendarEvents = true;
   };
 
   services.displayManager.dms-greeter = {
@@ -173,7 +167,7 @@
   boot.loader.systemd-boot.configurationLimit = 5;
 
   # Keep system logs small
-  services.journald.extraConfig = "SystemMaxUse=500M";
+  services.journald.settings.Journal.SystemMaxUse = "500M";
   
   # PipeWire
   security.rtkit.enable = true;
