@@ -8,7 +8,7 @@ My personal NixOS desktop: niri, DankMaterialShell and a gaming-ready AMD setup.
 
 <br />
 
-[![NixOS](https://img.shields.io/badge/NixOS-26.05_stable-5277C3?style=for-the-badge&logo=nixos&logoColor=white&labelColor=1a1b26)](https://nixos.org)
+[![NixOS](https://img.shields.io/badge/NixOS-unstable-5277C3?style=for-the-badge&logo=nixos&logoColor=white&labelColor=1a1b26)](https://nixos.org)
 [![Wayland](https://img.shields.io/badge/Wayland-niri-7EBAE4?style=for-the-badge&logo=wayland&logoColor=white&labelColor=1a1b26)](https://github.com/YaLTeR/niri)
 [![Shell](https://img.shields.io/badge/Shell-DankMaterialShell-9D7CD8?style=for-the-badge&labelColor=1a1b26)](https://danklinux.com)
 
@@ -110,12 +110,13 @@ My personal NixOS desktop: niri, DankMaterialShell and a gaming-ready AMD setup.
 
 How I bring this config onto a fresh machine.
 
-**1.** Install NixOS 26.05 with the graphical installer and choose *No desktop*.
+**1.** Install NixOS with the graphical installer and choose *No desktop*.
 
-**2.** Add the Home Manager channel:
+**2.** Switch to unstable and add the matching Home Manager channel:
 
 ```sh
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz home-manager
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 sudo nix-channel --update
 ```
 
@@ -146,8 +147,8 @@ After that I set wallpaper, monitors and cursor in the DMS settings.
 ### Daily loop
 
 ```sh
-sudo nixos-rebuild switch              # apply changes
-sudo nixos-rebuild switch --upgrade    # update channels, then apply
+sudo nixos-rebuild switch                # apply changes
+sudo nixos-rebuild switch --upgrade-all  # update all channels, then apply
 sudo git add -A && sudo git commit -m "..." && sudo git push
 ```
 
