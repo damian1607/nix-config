@@ -147,6 +147,7 @@
     ffmpegthumbnailer
     loupe
     capitaine-cursors
+    baobab
   ];
 
   # Zram Swap
@@ -167,6 +168,9 @@
   };
 
   boot.loader.systemd-boot.configurationLimit = 5;
+
+  # Keep system logs small
+  services.journald.extraConfig = "SystemMaxUse=500M";
   
   # PipeWire
   security.rtkit.enable = true;
