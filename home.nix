@@ -13,15 +13,13 @@
 
       # Cursor theme in ~/.icons, incl. ~/.icons/default for X11 apps
       home.pointerCursor = {
+        enable = true;
         package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
         size = 24;
+        gtk.enable = true;
       };
-      # Cursor for GTK apps
-      dconf.settings."org/gnome/desktop/interface" = {
-        cursor-theme = "capitaine-cursors";
-        cursor-size = 24;
-      };
+      gtk.enable = true;
 
       xdg.configFile = {
         "niri/config.kdl".source = ./dotfiles/niri/config.kdl;
