@@ -37,8 +37,9 @@
         publicShare = null;
       };
       # Hide folders that apps create in ~ but I never use
+      # Library: created by Plex Desktop on every start
       home.file.".hidden".text = ''
-        Library # Created by Plex Desktop
+        Library
       '';
       # Default apps
       xdg.mimeApps = {
