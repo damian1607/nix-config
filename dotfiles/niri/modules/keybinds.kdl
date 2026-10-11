@@ -14,7 +14,11 @@ binds {
     Mod+Shift+Q                     { spawn "dms" "ipc" "call" "powermenu" "toggle"; }          // Session Menu
 
     // ─── Audio ───
-    Pause                           { spawn "dms" "ipc" "call" "audio" "micmute"; }
+    Pause                           { spawn "dms" "ipc" "call" "mic" "mute"; }                  // Mic Mute
+    XF86AudioPlay                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
+    XF86AudioPause                  allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
+    XF86AudioPrev                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "previous"; }
+    XF86AudioNext                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "next"; }
 
     // ─── Window Movement and Focus ───
     Mod+Q                           { close-window; }

@@ -50,7 +50,7 @@
   users.users."damian" = {
     isNormalUser = true;
     description = "Damian";
-    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" "input" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       spotify
@@ -87,6 +87,9 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
   hardware.enableRedistributableFirmware = true;
+
+  # Wooting keyboard: installs Wootility and the udev rules for device access
+  hardware.wooting.enable = true;
 
   # German keyboard layout inside gamescope (it defaults to US)
   environment.sessionVariables.XKB_DEFAULT_LAYOUT = "de";
