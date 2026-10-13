@@ -148,6 +148,9 @@
     loupe
     capitaine-cursors
     baobab
+    parabolic
+    upscaler
+    neovim
   ];
 
   # Zram Swap
