@@ -1,0 +1,35 @@
+// Zen PiP floating
+window-rule {
+    match app-id="^zen-beta$" title="^Picture-in-Picture$"
+    open-floating true
+}
+// Steam friends list floats instead of tiling
+window-rule {
+    match app-id="^steam$" title="^Friends List$"
+    open-floating true
+}
+// Steam notification toasts float in the bottom-right corner
+window-rule {
+    match app-id="^steam$" title=r#"^notificationtoasts_\d+_desktop$"#
+    open-floating true
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+// Blur behind Zen's transparent UI
+window-rule {
+    match app-id="^zen-beta$"
+    background-effect {
+        blur true
+    }
+}
+// Keep the DMS wallpaper fixed behind all workspaces
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+// Only show the focus ring on the window that actually has keyboard focus
+window-rule {
+    match is-focused=false
+    focus-ring {
+        off
+    }
+}
