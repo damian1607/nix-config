@@ -8,7 +8,7 @@
 
     # Common Browser policies (locked)
     policies = {
-      AutofillAdressEnabled = false;
+      AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
       DisableAppUpdate = true;
       DisableFeedbackCommands = true;
@@ -59,7 +59,7 @@
         "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt"
       ];
     };
-    
+ 
     profiles.default = {
       # Betterfox: privacy, telemetry and performance prefs
       presets.betterfox.enable = true;
