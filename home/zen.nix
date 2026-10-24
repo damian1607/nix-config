@@ -72,6 +72,14 @@
         "browser.tabs.allow_transparent_browser" = true;
         "zen.welcome-screen.seen" = true;
       };
+
+      # Zen mods
+      mods = [
+        "a6335949-4465-4b71-926c-4a52d34bc9c0" # Better Find Bar
+        "f7c71d9a-bce2-420f-ae44-a64bd92975ab" # Better Unloaded Tabs
+        "906c6915-5677-48ff-9bfc-096a02a72379" # Floating Status Bar
+        "253a3a74-0cc4-47b7-8b82-996a64f030d5" # Floating History
+      ];
     };
   };
 }
