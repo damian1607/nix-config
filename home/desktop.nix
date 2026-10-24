@@ -10,7 +10,7 @@
     gtk.enable = true;
   };
   gtk.enable = true;
-
+  # Default apps
   xdg.configFile = {
     "niri/config.kdl".source = ../dotfiles/niri/config.kdl;
     "niri/modules".source = ../dotfiles/niri/modules;
@@ -48,10 +48,5 @@
       "text/plain" = "codium.desktop";
       "application/json" = "codium.desktop";
     };
-  };
-  # Zen Browser from the zen-browser flake, also sets it as default browser
-  programs.zen-browser = {
-    enable = true;
-    setAsDefaultBrowser = true;
   };
 }

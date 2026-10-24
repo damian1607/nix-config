@@ -11,6 +11,7 @@
         inputs.zen-browser.homeModules.default
         ./desktop.nix
         ./neovim.nix
+        ./zen.nix
       ];
 
       programs.git = {
