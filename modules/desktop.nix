@@ -4,21 +4,21 @@ let
   cursor = config.home-manager.users.damian.home.pointerCursor;
 in
 {
-  # ─── niri and DankMaterialShell ───
+  # ─── niri and dux shell ───
   programs.niri.enable = true;
 
-  programs.dms-shell = {
+  programs.dux-shell = {
     enable = true;
     systemd.enable = true;
   };
 
-  # DankSearch: file search for the DMS launcher
-  programs.dsearch = {
+  # Dux Search: file search for the Dux Shell launcher
+  programs.dux-search = {
     enable = true;
     systemd.enable = true;
   };
 
-  services.displayManager.dms-greeter = {
+  services.displayManager.dux-greeter = {
     enable = true;
     compositor.name = "niri";
     configHome = "/home/damian";
