@@ -25,6 +25,24 @@
         Fingerprinting = true;
       };
 
+      # No Mozilla account / sync
+      DisableFirefoxAccounts = true;
+
+      # DuckDuckGo without AI as the only search engine
+      SearchEngines = {
+        Add = [
+          {
+            Name = "DuckDuckGo (no AI)";
+            URLTemplate = "https://noai.duckduckgo.com/?q={searchTerms}";
+            SuggestURLTemplate = "https://duckduckgo.com/ac/?q={searchTerms}&type=list";
+            IconURL = "https://duckduckgo.com/favicon.ico";
+            Alias = "@ddg";
+          }
+        ];
+        Default = "DuckDuckGo (no AI)";
+        Remove = [ "Google" "Bing" "DuckDuckGo" "Ecosia" "Qwant" "eBay" "Wikipedia (de)" "Wikipedia (en)" "Amazon.de" "Perplexity" ];
+      };
+
       # Extensions
       ExtensionSettings = builtins.mapAttrs (_: slug: {
         install_url = "https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi";
@@ -71,6 +89,12 @@
         "zen.widget.linux.transparency" = true;
         "browser.tabs.allow_transparent_browser" = true;
         "zen.welcome-screen.seen" = true;
+        "zen.view.use-single-toolbar" = false;
+        "zen.view.sidebar-expanded" = true;
+        "zen.glance.open-essential-external-links" = false;
+        "browser.profiles.enabled" = false;
+        "browser.translations.neverTranslateLanguages" = "de,en";
+        "zen.theme.hide-unified-extensions-button" = true;
       };
 
       # Zen mods
@@ -80,6 +104,12 @@
         "906c6915-5677-48ff-9bfc-096a02a72379" # Floating Status Bar
         "253a3a74-0cc4-47b7-8b82-996a64f030d5" # Floating History
       ];
+
+      # Toolbar: only Proton Pass pinned
+      extensionButtons = {
+        "nav-bar" = [ "78272b6fa58f4a1abaac99321d503a20@proton.me" ];
+        "unified-extensions-area" = [ "uBlock0@raymondhill.net" ];
+      };
     };
   };
 }
