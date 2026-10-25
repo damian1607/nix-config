@@ -1,7 +1,7 @@
 binds {
 
     // ─── Applications ───
-    Mod+Return                      { spawn "alacritty"; }
+    Mod+Return                      { spawn "ghostty"; }
     Mod+B                           { spawn "zen-beta"; }
     Mod+E                           { spawn "nautilus"; }
 

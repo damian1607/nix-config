@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     # Terminal and CLI
-    alacritty
+    ghostty
     fastfetch
     git
     gh

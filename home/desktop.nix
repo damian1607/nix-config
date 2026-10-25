@@ -15,7 +15,7 @@
     "niri/config.kdl".source = ../dotfiles/niri/config.kdl;
     "niri/modules".source = ../dotfiles/niri/modules;
     "fish/config.fish".source = ../dotfiles/fish/config.fish;
-    "alacritty/alacritty.toml".source = ../dotfiles/alacritty/alacritty.toml;
+    "ghostty/config".source = ../dotfiles/ghostty/config;
     "fastfetch".source = ../dotfiles/fastfetch;
   };
   # XDG user directories

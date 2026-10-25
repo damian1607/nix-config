@@ -28,9 +28,9 @@
       vim.opt.shiftwidth = 2
       vim.opt.tabstop = 2
 
-      -- niri configs and the alacritty import list use 4 spaces
+      -- niri configs use 4 spaces
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "kdl", "toml" },
+        pattern = { "kdl" },
         callback = function()
           vim.opt_local.shiftwidth = 4
           vim.opt_local.tabstop = 4
