@@ -47,4 +47,9 @@ sudo cp /etc/nixos.installer/hardware-configuration.nix /etc/nixos/
 sudo nixos-rebuild switch --flake /etc/nixos#nixos --option experimental-features "nix-command flakes"
 ```
 
+**4.** Remove old bootloader
+```sh
+sudo bootctl remove
+```
+
 After that I set my wallpaper and monitors in the dux settings.
