@@ -17,6 +17,7 @@
     "fish/config.fish".source = ../dotfiles/fish/config.fish;
     "ghostty/config".source = ../dotfiles/ghostty/config;
     "fastfetch".source = ../dotfiles/fastfetch;
+    "MangoHud/MangoHud.conf".source = ../dotfiles/MangoHud/MangoHud.conf;
   };
   # XDG user directories
   xdg.userDirs = {
