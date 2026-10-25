@@ -114,6 +114,7 @@
         "zen.urlbar.suggestions.quick-actions" = false;
         "browser.topsites.useRemoteSetting" = false;
         "browser.newtabpage.pinned" = "[]";
+        "general.autoScroll" = true;
       };
 
       # Zen mods
