@@ -16,7 +16,7 @@
     }
   },
 
-  // Only ANSI colors (names / numbers) so everything follows the DMS terminal palette.
+  // Only ANSI colors (names / numbers) so everything follows the dux terminal palette.
   // Keys are padded by hand to the same length, so every "~>" lines up.
   "display": {
     "separator": " ~>  ",

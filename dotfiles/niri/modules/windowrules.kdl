@@ -21,7 +21,7 @@ window-rule {
         blur true
     }
 }
-// Keep the DMS wallpaper fixed behind all workspaces
+// Keep the dux wallpaper fixed behind all workspaces
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
