@@ -85,7 +85,7 @@
         "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt"
       ];
     };
- 
+
     profiles.default = {
       # Betterfox: privacy, telemetry and performance prefs
       presets.betterfox.enable = true;
