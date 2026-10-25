@@ -25,6 +25,14 @@
         Fingerprinting = true;
       };
 
+      # Zen locks the address bar shortcuts on, override that
+      Preferences = {
+        "browser.urlbar.suggest.topsites" = {
+          Value = false;
+          Status = "locked";
+        };
+      };
+
       # No Mozilla account / sync
       DisableFirefoxAccounts = true;
 
@@ -95,6 +103,17 @@
         "browser.profiles.enabled" = false;
         "browser.translations.neverTranslateLanguages" = "de,en";
         "zen.theme.hide-unified-extensions-button" = true;
+        "places.history.enabled" = false;
+        "browser.urlbar.suggest.history" = false;
+        "browser.urlbar.suggest.bookmark" = false;
+        "browser.urlbar.suggest.clipboard" = false;
+        "browser.urlbar.suggest.openpage" = false;
+        "browser.urlbar.suggest.engines" = false;
+        "browser.urlbar.suggest.quickactions" = false;
+        "browser.urlbar.suggest.recentsearches" = false;
+        "zen.urlbar.suggestions.quick-actions" = false;
+        "browser.topsites.useRemoteSetting" = false;
+        "browser.newtabpage.pinned" = "[]";
       };
 
       # Zen mods
