@@ -5,3 +5,7 @@ prefer-no-csd
 hotkey-overlay {
     skip-at-startup
 }
+// Disable pasting with middle click
+clipboard {
+    disable-primary
+}
