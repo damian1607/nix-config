@@ -2,11 +2,34 @@
 
 {
   # ─── Boot ───
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
-  # No kernel cmdline editing at boot (init=/bin/sh would give a root shell)
-  boot.loader.systemd-boot.editor = false;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.limine = {
+    enable = true;
+    maxGenerations = 5;
+    enableEditor = false;
+
+    # Tokyo Night
+    style = {
+      wallpapers = [];
+      backdrop = "1a1b26";
+      interface = {
+        branding = "NixOS";
+        brandingColor = "bb9af7";
+        helpColor = "7aa2f7";
+        helpColorBright = "8db0ff";
+      };
+      graphicalTerminal = {
+        foreground = "c0caf5";
+        background = "ff1a1b26";
+        brightForeground = "c0caf5";
+        brightBackground = "ff24283b";
+        palette = "15161e;f7768e;9ece6a;e0af68;7aa2f7;bb9af7;7dcfff;a9b1d6";
+        brightPalette = "414868;ff899d;9fe044;faba4a;8db0ff;c7a9ff;a4daff;c0caf5";
+      };
+    };
+  };
 
   # ─── Network, time and locale ───
   networking.hostName = "nixos";
