@@ -5,7 +5,7 @@ binds {
     Mod+B                           { spawn "zen-beta"; }
     Mod+E                           { spawn "nautilus"; }
 
-    // ─── DankMaterialShell ───
+    // ─── Dux Shell ───
     Mod+Ctrl+Return                 { spawn "dms" "ipc" "call" "spotlight" "toggle"; }          // Launcher
     Mod+Shift+Return                { spawn "dms" "ipc" "call" "dash" "toggle" "wallpaper"; }   // Wallpaper
     Mod+Shift+C                     { spawn "dms" "ipc" "call" "control-center" "toggle"; }     // Control Center

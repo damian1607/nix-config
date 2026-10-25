@@ -1,0 +1,5 @@
+// Mouse cursor
+cursor {
+    xcursor-theme "capitaine-cursors"
+    xcursor-size 24
+}

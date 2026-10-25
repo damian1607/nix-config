@@ -4,12 +4,11 @@ include "/home/damian/.config/niri/modules/layout.kdl"
 include "/home/damian/.config/niri/modules/general.kdl"
 include "/home/damian/.config/niri/modules/windowrules.kdl"
 include "/home/damian/.config/niri/modules/keybinds.kdl"
+include "/home/damian/.config/niri/modules/cursor.kdl"
 
-// DankMaterialShell
-include optional=true "/home/damian/.config/niri/dms/cursor.kdl"
+// dux shell
 include optional=true "/home/damian/.config/niri/dms/outputs.kdl"
-include optional=true "/home/damian/.config/niri/dms/windowrules.kdl"
-include optional=true "/home/damian/.config/niri/dms/binds.kdl"
 include optional=true "/home/damian/.config/niri/dms/colors.kdl"
 include optional=true "/home/damian/.config/niri/dms/layout.kdl"
 include optional=true "/home/damian/.config/niri/dms/alttab.kdl"
+include optional=true "/home/damian/.config/niri/dms/wpblur.kdl"

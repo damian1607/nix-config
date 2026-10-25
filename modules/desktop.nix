@@ -34,8 +34,7 @@ in
     # Force Electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
 
-    # Cursor for X11 apps (via xwayland-satellite), taken from home.pointerCursor in home/desktop.nix.
-    # The DMS cursor setting still has to be changed by hand.
+    # Cursor for X11 apps (via xwayland-satellite), taken from home.pointerCursor in home/desktop.nix
     XCURSOR_THEME = cursor.name;
     XCURSOR_SIZE = toString cursor.size;
   };

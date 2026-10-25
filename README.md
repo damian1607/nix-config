@@ -9,9 +9,9 @@
 ### What's inside
 
 - niri as the compositor
-- dankmaterialshell as bar, launcher and wallpaper-based theming
-- danksearch for file search in the dms launcher
-- dms-greeter on greetd
+- dux shell as bar, launcher and wallpaper-based theming
+- dux-search for file search in the dux launcher
+- dux-greeter on greetd
 - dotfiles from `dotfiles/` are linked into `~/.config` as read-only symlinks
 - neovim with catppuccin, lualine and treesitter
 
@@ -26,7 +26,7 @@
 | `Mod` `B` | Browser | | `Mod` `W` / `S` | Focus window up / down |
 | `Mod` `E` | Files | | `Mod` `1`–`9` | Switch workspace |
 | `Mod` `Ctrl` `Return` | Launcher | | `Mod` `T` | Toggle floating |
-| `Mod` `Shift` `S` | DMS settings | | `Mod` `Q` | Close window |
+| `Mod` `Shift` `S` | Dux settings | | `Mod` `Q` | Close window |
 | `Mod` `L` | Lock screen | | `Mod` `Shift` `Esc` | Hotkey overlay |
 
 ### Installation
@@ -47,4 +47,4 @@ sudo cp /etc/nixos.installer/hardware-configuration.nix /etc/nixos/
 sudo nixos-rebuild switch --flake /etc/nixos#nixos --option experimental-features "nix-command flakes"
 ```
 
-After that I set wallpaper, monitors and cursor in the DMS settings.
+After that I set my wallpaper and monitors in the dux settings.
