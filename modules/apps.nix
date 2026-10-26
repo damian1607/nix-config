@@ -19,6 +19,7 @@
 
     # Files and media
     nautilus
+    file-roller
     ffmpegthumbnailer
     baobab
     loupe
