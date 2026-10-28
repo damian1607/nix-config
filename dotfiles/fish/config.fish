@@ -1,11 +1,11 @@
 set -g fish_greeting
 
-# fastfetch only in Ghostty, not in nvim or VSCodium terminals
-if status is-interactive; and test "$TERM" = xterm-ghostty
-  fastfetch
-end
-
 if status is-interactive
   alias ls "eza --icons"
-  alias cat "bat --plain"
+  alias cat "bat -pp --theme=ansi"
+
+  # fastfetch only in Ghostty
+  if test "$TERM" = xterm-ghostty
+    fastfetch
+  end
 end
