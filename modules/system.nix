@@ -5,6 +5,9 @@
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
@@ -63,6 +66,9 @@
     extraGroups = [ "networkmanager" "wheel" "gamemode" ];
     shell = pkgs.fish;
   };
+
+  # /etc/nixos belongs to me, so git and nh work without sudo
+  systemd.tmpfiles.rules = [ "Z /etc/nixos - damian users -" ];
 
   # Enable fish shell (has to be set per user)
   programs.fish.enable = true;

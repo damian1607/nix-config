@@ -23,6 +23,11 @@
         };
       };
 
+      programs.gh = {
+        enable = true;
+        gitCredentialHelper.enable = true;
+      };
+
       home.stateVersion = "26.05";
     };
   };
