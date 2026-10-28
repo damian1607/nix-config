@@ -4,3 +4,8 @@ set -g fish_greeting
 if status is-interactive; and test "$TERM" = xterm-ghostty
   fastfetch
 end
+
+if status is-interactive
+  alias ls "eza --icons"
+  alias cat "bat --plain"
+end

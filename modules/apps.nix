@@ -14,8 +14,9 @@
     ghostty
     fastfetch
     git
-    gh
     wl-clipboard  # clipboard access for nvim under Wayland
+    eza
+    bat
 
     # Files and media
     nautilus
