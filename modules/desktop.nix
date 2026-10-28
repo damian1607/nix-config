@@ -16,6 +16,7 @@ in
   services.displayManager.noctalia-greeter = {
     enable = true;
     settings.keyboard.layout = "de";
+    passwordlessSyncUsers = [ "damian" ];
     cursorTheme = {
       package = cursor.package;
       name = cursor.name;

@@ -34,3 +34,8 @@ enabled = true
 timeout = 660
 action = "screen_off"
 enabled = true
+
+
+# Copy wallpaper, colors, font and monitor layout to the login screen on every change
+[shell.greeter_sync]
+auto_sync = true
