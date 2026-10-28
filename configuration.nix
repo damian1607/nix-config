@@ -22,11 +22,14 @@
   # Deduplicate the Nix store
   nix.optimise.automatic = true;
 
-  # Garbage collector
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 14d";
+  # nh: nicer nixos-rebuild (also cleans older gens)
+  programs.nh = {
+    enable = true;
+    flake = "/etc/nixos";
+    clean = {
+      enable = true;
+      extraArgs = "--keep-since 14d --keep 5";
+    };
   };
 
   # DO NOT CHANGE THIS VALUE!
