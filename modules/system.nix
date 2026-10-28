@@ -60,7 +60,7 @@
   users.users."damian" = {
     isNormalUser = true;
     description = "Damian";
-    extraGroups = [ "networkmanager" "wheel" "gamemode" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
     shell = pkgs.fish;
   };
 

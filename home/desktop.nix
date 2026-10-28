@@ -10,7 +10,7 @@
     gtk.enable = true;
   };
   gtk.enable = true;
-  # Default apps
+  # Dotfiles as read-only symlinks
   xdg.configFile = {
     "niri/config.kdl".source = ../dotfiles/niri/config.kdl;
     "niri/modules".source = ../dotfiles/niri/modules;

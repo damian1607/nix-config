@@ -31,7 +31,7 @@
 
 ### Installation
 
-**1.** Install NixOS with the graphical installer and choose *No desktop*.
+**1.** Install NixOS with the graphical installer choosing *No desktop* and naming the user *damian*.
 
 **2.** Swap in this repo, but keep the hardware config the installer generated:
 
