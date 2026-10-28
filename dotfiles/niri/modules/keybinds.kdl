@@ -5,20 +5,21 @@ binds {
     Mod+B                           { spawn "zen-beta"; }
     Mod+E                           { spawn "nautilus"; }
 
-    // ─── Dux Shell ───
-    Mod+Ctrl+Return                 { spawn "dms" "ipc" "call" "spotlight" "toggle"; }          // Launcher
-    Mod+Shift+Return                { spawn "dms" "ipc" "call" "dash" "toggle" "wallpaper"; }   // Wallpaper
-    Mod+Shift+C                     { spawn "dms" "ipc" "call" "control-center" "toggle"; }     // Control Center
-    Mod+Shift+S                     { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }    // Settings
-    Mod+L                           { spawn "dms" "ipc" "call" "lock" "lock"; }                 // Lock Screen
-    Mod+Shift+Q                     { spawn "dms" "ipc" "call" "powermenu" "toggle"; }          // Session Menu
+    // ─── Noctalia ───
+    Mod+Ctrl+Return                 { spawn "noctalia" "msg" "panel-toggle" "launcher"; }          // Launcher
+    Mod+Shift+Return                { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }         // Wallpaper
+    Mod+Shift+C                     { spawn "noctalia" "msg" "panel-toggle" "control-center"; }    // Control Center
+    Mod+Shift+S                     { spawn "noctalia" "msg" "settings-toggle"; }                  // Settings
+    Mod+L                           { spawn "noctalia" "msg" "session" "lock"; }                   // Lock Screen
+    Mod+Shift+Q                     { spawn "noctalia" "msg" "panel-toggle" "session"; }           // Session Menu
+    Mod+V                           { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }         // Clipboard History
 
     // ─── Audio ───
-    Pause                           { spawn "dms" "ipc" "call" "mic" "mute"; }                  // Mic Mute
-    XF86AudioPlay                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
-    XF86AudioPause                  allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
-    XF86AudioPrev                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "previous"; }
-    XF86AudioNext                   allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "next"; }
+    Pause                           { spawn "noctalia" "msg" "mic-mute"; }                         // Mic Mute
+    XF86AudioPlay                   allow-when-locked=true { spawn "noctalia" "msg" "media" "toggle"; }
+    XF86AudioPause                  allow-when-locked=true { spawn "noctalia" "msg" "media" "toggle"; }
+    XF86AudioPrev                   allow-when-locked=true { spawn "noctalia" "msg" "media" "previous"; }
+    XF86AudioNext                   allow-when-locked=true { spawn "noctalia" "msg" "media" "next"; }
 
     // ─── Window Movement and Focus ───
     Mod+Q                           { close-window; }

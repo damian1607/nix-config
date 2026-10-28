@@ -4,24 +4,22 @@ let
   cursor = config.home-manager.users.damian.home.pointerCursor;
 in
 {
-  # ─── niri and dux shell ───
+  # ─── niri and noctalia ───
   programs.niri.enable = true;
 
-  programs.dux-shell = {
+  programs.noctalia = {
     enable = true;
     systemd.enable = true;
   };
 
-  # Dux Search: file search for the Dux Shell launcher
-  programs.dux-search = {
+  # Noctalia Greeter on greetd
+  services.displayManager.noctalia-greeter = {
     enable = true;
-    systemd.enable = true;
-  };
-
-  services.displayManager.dux-greeter = {
-    enable = true;
-    compositor.name = "niri";
-    configHome = "/home/damian";
+    settings.keyboard.layout = "de";
+    cursorTheme = {
+      package = cursor.package;
+      name = cursor.name;
+    };
   };
 
   # Gnome dconf and virtual filesystem

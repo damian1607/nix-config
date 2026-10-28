@@ -18,6 +18,7 @@
     "ghostty/config".source = ../dotfiles/ghostty/config;
     "fastfetch".source = ../dotfiles/fastfetch;
     "MangoHud/MangoHud.conf".source = ../dotfiles/MangoHud/MangoHud.conf;
+    "noctalia/config.toml".source = ../dotfiles/noctalia/config.toml;
   };
   # XDG user directories
   xdg.userDirs = {

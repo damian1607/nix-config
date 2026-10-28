@@ -9,9 +9,8 @@
 ### What's inside
 
 - niri as the compositor
-- dux shell as bar, launcher and wallpaper-based theming
-- dux-search for file search in the dux launcher
-- dux-greeter on greetd
+- noctalia as bar, launcher, lock screen and wallpaper-based theming
+- noctalia-greeter on greetd
 - dotfiles from `dotfiles/` are linked into `~/.config` as read-only symlinks
 - neovim with catppuccin, lualine and treesitter
 
@@ -26,7 +25,7 @@
 | `Mod` `B` | Browser | | `Mod` `W` / `S` | Focus window up / down |
 | `Mod` `E` | Files | | `Mod` `1`–`9` | Switch workspace |
 | `Mod` `Ctrl` `Return` | Launcher | | `Mod` `T` | Toggle floating |
-| `Mod` `Shift` `S` | Dux settings | | `Mod` `Q` | Close window |
+| `Mod` `Shift` `S` | Noctalia settings | | `Mod` `Q` | Close window |
 | `Mod` `L` | Lock screen | | `Mod` `Shift` `Esc` | Hotkey overlay |
 
 ### Installation
@@ -52,4 +51,4 @@ sudo nixos-rebuild switch --flake /etc/nixos#nixos --option experimental-feature
 sudo bootctl remove
 ```
 
-After that I set my wallpaper and monitors in the dux settings.
+After that I set my wallpaper in the Noctalia settings and customize the bar, launcher, etc.

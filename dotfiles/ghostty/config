@@ -1,6 +1,5 @@
-# Colors come from dux shell (generated from the wallpaper).
-# The theme file appears after the first wallpaper or theme change.
-theme = dankcolors
+# Colors come from Noctalia (its ghostty template writes themes/noctalia).
+theme = noctalia
 
 # Window
 background-opacity = 0.85

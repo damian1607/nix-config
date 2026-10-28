@@ -9,3 +9,7 @@ hotkey-overlay {
 clipboard {
     disable-primary
 }
+// Lets Noctalia focus windows from notifications
+debug {
+    honor-xdg-activation-with-invalid-serial
+}

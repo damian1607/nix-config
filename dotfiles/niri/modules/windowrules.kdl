@@ -21,15 +21,27 @@ window-rule {
         blur true
     }
 }
-// Keep the dux wallpaper fixed behind all workspaces
-layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
-}
 // Only show the focus ring on the window that actually has keyboard focus
 window-rule {
     match is-focused=false
     focus-ring {
         off
     }
+}
+// Rounded corners on all windows, apps draw themselves as tiled (no own shadows)
+window-rule {
+    geometry-corner-radius 16
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
+// Noctalia settings window floats
+window-rule {
+    match app-id=r#"^dev\.noctalia\.Noctalia$"#
+    open-floating true
+}
+// Keep the Noctalia wallpaper fixed behind all workspaces
+layer-rule {
+    match namespace="^noctalia-wallpaper"
+    place-within-backdrop true
 }

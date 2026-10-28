@@ -1,0 +1,36 @@
+# Base config for Noctalia. Changes made in the Noctalia settings are saved to
+# ~/.local/state/noctalia/settings.toml and override the values here.
+
+[shell]
+# Apps survive a restart of noctalia.service
+launch_apps_as_systemd_services = true
+# Password prompts for apps that need root (e.g. mounting drives)
+polkit_agent = true
+# Same font as the rest of the system (fonts.fontconfig in modules/desktop.nix)
+font_family = "Noto Sans"
+# Start typing in the niri overview (Mod+O) to search apps, close the overview on launch
+niri_overview_type_to_launch_enabled = true
+niri_overview_close_on_launch_enabled = true
+
+# Colors generated from the wallpaper
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+[theme.templates]
+enable_builtin_templates = true
+# ghostty: dotfiles/ghostty/config uses "theme = noctalia"
+# niri: dotfiles/niri/config.kdl includes noctalia.kdl
+builtin_ids = ["ghostty", "niri"]
+
+# Lock after 10 minutes, monitors off after 11
+[idle.behavior.lock]
+timeout = 600
+action = "lock"
+enabled = true
+
+[idle.behavior.screen-off]
+timeout = 660
+action = "screen_off"
+enabled = true
