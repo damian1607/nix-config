@@ -51,4 +51,4 @@ sudo nixos-rebuild switch --flake /etc/nixos#nixos --option experimental-feature
 sudo bootctl remove
 ```
 
-After that I set my wallpaper in the Noctalia settings and customize the bar, launcher, etc.
+After that I set my wallpaper in the Noctalia settings.
