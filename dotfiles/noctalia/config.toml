@@ -12,6 +12,21 @@ font_family = "Noto Sans"
 niri_overview_type_to_launch_enabled = true
 niri_overview_close_on_launch_enabled = true
 
+# Copy wallpaper, colors, font and monitor layout to the login screen on every change
+[shell.greeter_sync]
+auto_sync = true
+
+[shell.launcher]
+layout = "simple"
+categories = false
+
+# Translucent panels; clipboard and control center open at the bar button
+[shell.panel]
+transparency_mode = "glass"
+clipboard_placement = "attached"
+open_near_click_clipboard = true
+open_near_click_control_center = true
+
 # Colors generated from the wallpaper
 [theme]
 mode = "dark"
@@ -24,6 +39,63 @@ enable_builtin_templates = true
 # niri: dotfiles/niri/config.kdl includes noctalia.kdl
 builtin_ids = ["ghostty", "niri"]
 
+# Bar only on the main monitor (DP-1)
+[bar.default]
+start = ["launcher", "workspaces", "media"]
+end = ["tray", "notifications", "clipboard", "volume", "session"]
+background_opacity = 0.8
+capsule = true
+capsule_opacity = 0.0
+margin_edge = 4
+margin_ends = 300
+
+[bar.default.monitor.DP-2]
+enabled = false
+
+[widget.media]
+hide_when_idle = true
+
+[widget.tray]
+drawer = true
+
+[widget.workspaces]
+show_labels = false
+
+[widget.wallpaper]
+enabled = false
+
+[control_center]
+hidden_tabs = ["monitor", "power", "bluetooth", "screen-time"]
+sidebar_section = "none"
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "mic_mute"
+
+[[control_center.shortcuts]]
+type = "system"
+
+[notification]
+background_opacity = 0.85
+
+[osd]
+background_opacity = 0.85
+
+# Location from the IP address (for night light and weather)
+[location]
+auto_locate = true
+
 # Lock after 10 minutes, monitors off after 11
 [idle.behavior.lock]
 timeout = 600
@@ -35,6 +107,3 @@ timeout = 660
 action = "screen_off"
 enabled = true
 
-# Copy wallpaper, colors, font and monitor layout to the login screen on every change
-[shell.greeter_sync]
-auto_sync = true
