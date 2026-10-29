@@ -36,19 +36,30 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
+      # Files
+      "inode/directory" = "org.gnome.Nautilus.desktop";
+      # Text
+      "text/plain" = "codium.desktop";
+      "application/json" = "codium.desktop";
+      # Documents
+      "application/pdf" = "org.gnome.Papers.desktop";
+      # Images
       "image/png" = "org.gnome.Loupe.desktop";
       "image/jpeg" = "org.gnome.Loupe.desktop";
       "image/webp" = "org.gnome.Loupe.desktop";
       "image/gif" = "org.gnome.Loupe.desktop";
       "image/svg+xml" = "org.gnome.Loupe.desktop";
+      # Video
       "video/mp4" = "io.github.celluloid_player.Celluloid.desktop";
       "video/x-matroska" = "io.github.celluloid_player.Celluloid.desktop";
       "video/webm" = "io.github.celluloid_player.Celluloid.desktop";
-      "application/pdf" = "org.gnome.Papers.desktop";
-      "inode/directory" = "org.gnome.Nautilus.desktop";
-      # Overrides Zen's setAsDefaultBrowser
-      "text/plain" = "codium.desktop";
-      "application/json" = "codium.desktop";
+      # Audio
+      "audio/mpeg" = "io.github.celluloid_player.Celluloid.desktop";
+      "audio/flac" = "io.github.celluloid_player.Celluloid.desktop";
+      "audio/ogg" = "io.github.celluloid_player.Celluloid.desktop";
+      "audio/opus" = "io.github.celluloid_player.Celluloid.desktop";
+      "audio/x-wav" = "io.github.celluloid_player.Celluloid.desktop";
+      "audio/mp4" = "io.github.celluloid_player.Celluloid.desktop";
       # Archives
       "application/zip" = "org.gnome.FileRoller.desktop";
       "application/x-7z-compressed" = "org.gnome.FileRoller.desktop";

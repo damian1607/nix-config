@@ -8,7 +8,6 @@
     extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
   programs.gamemode.enable = true;
-  programs.gamescope.enable = true;
 
   # German keyboard layout inside gamescope (it defaults to US)
   environment.sessionVariables.XKB_DEFAULT_LAYOUT = "de";

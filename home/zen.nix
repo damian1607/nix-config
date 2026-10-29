@@ -42,7 +42,6 @@
           {
             Name = "DuckDuckGo (no AI)";
             URLTemplate = "https://noai.duckduckgo.com/?q={searchTerms}";
-            SuggestURLTemplate = "https://duckduckgo.com/ac/?q={searchTerms}&type=list";
             IconURL = "https://duckduckgo.com/favicon.ico";
             Alias = "@ddg";
           }

@@ -29,6 +29,9 @@ in
 
   services.flatpak.enable = true;
 
+  # Disable screen reader
+  services.speechd.enable = false;
+
   environment.sessionVariables = {
     # Force Electron apps to use Wayland
     NIXOS_OZONE_WL = "1";

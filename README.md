@@ -40,15 +40,16 @@ sudo nix-shell -p git --run "git clone https://github.com/damian1607/nix-config.
 sudo cp /etc/nixos.installer/hardware-configuration.nix /etc/nixos/
 ```
 
-**3.** Build and reboot
+**3.** Build
 
 ```sh
 sudo nixos-rebuild switch --flake /etc/nixos#nixos --option experimental-features "nix-command flakes"
 ```
 
-**4.** Remove old bootloader
+**4.** Remove the old bootloader and reboot
 ```sh
 sudo bootctl remove
+reboot
 ```
 
 After that I set my wallpaper in the Noctalia settings.

@@ -70,7 +70,7 @@
   # /etc/nixos belongs to me, so git and nh work without sudo
   systemd.tmpfiles.rules = [ "Z /etc/nixos - damian users -" ];
 
-  # Enable fish shell (has to be set per user)
+  # Enable fish shell
   programs.fish.enable = true;
   programs.starship.enable = true;
 
