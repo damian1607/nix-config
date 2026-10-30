@@ -101,6 +101,7 @@
         "zen.glance.open-essential-external-links" = false;
         "browser.profiles.enabled" = false;
         "browser.translations.neverTranslateLanguages" = "de,en";
+        "browser.translations.automaticallyPopup" = false;
         "zen.theme.hide-unified-extensions-button" = true;
         "places.history.enabled" = false;
         "browser.urlbar.suggest.history" = false;
