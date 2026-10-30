@@ -11,6 +11,8 @@ font_family = "Noto Sans"
 # Start typing in the niri overview (Mod+O) to search apps, close the overview on launch
 niri_overview_type_to_launch_enabled = true
 niri_overview_close_on_launch_enabled = true
+# Disable the confirm dialog for clearing clipboard history
+clipboard_confirm_clear_history = false
 
 # Copy wallpaper, colors, font and monitor layout to the login screen on every change
 [shell.greeter_sync]
@@ -92,6 +94,9 @@ background_opacity = 0.85
 
 [osd]
 background_opacity = 0.85
+
+[osd.kinds]
+media = false
 
 # Location from the IP address (for night light and weather)
 [location]
