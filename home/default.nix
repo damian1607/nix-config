@@ -23,6 +23,16 @@
         };
       };
 
+      programs.ssh = {
+        enable = true;
+        enableDefaultConfig = false;
+        matchBlocks.homelab = {
+          hostname = "192.168.2.24";
+          port = 2222;
+          user = "damian";
+        };
+      };
+
       programs.gh = {
         enable = true;
         gitCredentialHelper.enable = true;

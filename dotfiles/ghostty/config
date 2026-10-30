@@ -18,3 +18,6 @@ mouse-hide-while-typing = true
 
 # Hide the "config reloaded" / "copied" toasts
 app-notifications = no-clipboard-copy,no-config-reload
+
+# Copy Ghostty's terminfo to remote hosts on ssh
+shell-integration-features = ssh-terminfo
