@@ -26,7 +26,7 @@
       programs.ssh = {
         enable = true;
         enableDefaultConfig = false;
-        matchBlocks.homelab = {
+        settings.homelab = {
           hostname = "192.168.2.24";
           port = 2222;
           user = "damian";
