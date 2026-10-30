@@ -54,6 +54,7 @@ enabled = false
 
 [widget.media]
 hide_when_idle = true
+hide_when_no_media = true
 
 [widget.tray]
 drawer = true
