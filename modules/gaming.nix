@@ -6,8 +6,15 @@
     enable = true;
     gamescopeSession.enable = true;
     extraCompatPackages = [ pkgs.proton-ge-bin ];
+    package = pkgs.steam.override {
+      extraEnv = {
+        PROTON_ENABLE_WAYLAND = "1";
+        PROTON_NO_NTSYNC = "1";
+        PROTON_FSR4_UPGRADE = "1";
+        MANGOHUD = "1";
+      };
+    };
   };
-  programs.gamemode.enable = true;
 
   # German keyboard layout inside gamescope (it defaults to US)
   environment.sessionVariables.XKB_DEFAULT_LAYOUT = "de";
