@@ -10,7 +10,8 @@
       catppuccin-nvim
       lualine-nvim
       nvim-web-devicons
-      (nvim-treesitter.withPlugins (p: [ p.nix p.lua p.kdl p.toml p.json p.bash p.fish p.markdown ]))
+      nvim-autopairs
+      (nvim-treesitter.withPlugins (p: [ p.nix p.lua p.kdl p.toml p.json p.bash p.fish p.markdown p.java ]))
     ];
 
     initLua = ''
@@ -28,9 +29,9 @@
       vim.opt.shiftwidth = 2
       vim.opt.tabstop = 2
 
-      -- niri configs use 4 spaces
+      -- niri configs and java use 4 spaces
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "kdl" },
+        pattern = { "kdl", "java" },
         callback = function()
           vim.opt_local.shiftwidth = 4
           vim.opt_local.tabstop = 4
@@ -48,6 +49,9 @@
       require("lualine").setup({
         options = { theme = "auto", globalstatus = true },
       })
+
+      -- Auto-close brackets and quotes
+      require("nvim-autopairs").setup({ check_ts = true })
 
       -- Use the JSON parser for .jsonc files
       vim.treesitter.language.register("json", "jsonc")
