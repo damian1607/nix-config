@@ -9,6 +9,9 @@
     ];
   };
 
+  # JDK for java development
+  programs.java.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Terminal and CLI
     ghostty
