@@ -21,6 +21,12 @@
           user.email = "damianchw@proton.me";
           pull.rebase = true;
         };
+        # Sign commits with SSH key so GitHub shows them as verified
+        signing = {
+          format = "ssh";
+          key = "/home/damian/.ssh/id_ed25519.pub";
+          signByDefault = true;
+        };
       };
 
       programs.ssh = {
