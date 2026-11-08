@@ -10,7 +10,11 @@
       autoUpdateNotification = true;
 
       plugins = {
+        DisableCallIdle.enabled = true;
         FakeNitro.enabled = true;
+        ForceOwnerCrown.enabled = true;
+        PlainFolderIcon.enabled = true;
+        RelationshipNotifier.enabled = true;
       };
     };
   };
