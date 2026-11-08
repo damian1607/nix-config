@@ -43,7 +43,6 @@
   # Only for my user
   users.users."damian".packages = with pkgs; [
     spotify
-    (discord.override { withVencord = true; enableAutoscroll = true; })
     plex-desktop
   ];
 }

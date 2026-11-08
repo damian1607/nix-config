@@ -11,6 +11,7 @@
         inputs.zen-browser.homeModules.default
         ./desktop.nix
         ./neovim.nix
+        ./vesktop.nix
         ./zen.nix
       ];
 
