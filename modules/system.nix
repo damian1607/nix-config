@@ -8,6 +8,9 @@
   # Latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # NTSYNC for Proton
+  boot.kernelModules = [ "ntsync"];
+
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
