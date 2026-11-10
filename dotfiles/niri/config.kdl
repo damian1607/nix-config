@@ -1,11 +1,11 @@
 // Custom Modules
-include "/home/damian/.config/niri/modules/input.kdl"
-include "/home/damian/.config/niri/modules/outputs.kdl"
-include "/home/damian/.config/niri/modules/layout.kdl"
-include "/home/damian/.config/niri/modules/general.kdl"
-include "/home/damian/.config/niri/modules/windowrules.kdl"
-include "/home/damian/.config/niri/modules/keybinds.kdl"
-include "/home/damian/.config/niri/modules/cursor.kdl"
+include "modules/input.kdl"
+include "modules/outputs.kdl"
+include "modules/layout.kdl"
+include "modules/general.kdl"
+include "modules/windowrules.kdl"
+include "modules/keybinds.kdl"
+include "modules/cursor.kdl"
 
 // Colors from Noctalia
-include optional=true "/home/damian/.config/niri/noctalia.kdl"
+include optional=true "noctalia.kdl"

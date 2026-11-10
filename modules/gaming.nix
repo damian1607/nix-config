@@ -9,7 +9,6 @@
     package = pkgs.steam.override {
       extraEnv = {
         PROTON_ENABLE_WAYLAND = "1";
-        PROTON_NO_NTSYNC = "1";
         PROTON_FSR4_UPGRADE = "1";
         MANGOHUD = "1";
       };

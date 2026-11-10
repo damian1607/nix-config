@@ -11,8 +11,12 @@
       lualine-nvim
       nvim-web-devicons
       nvim-autopairs
+      nvim-lspconfig
       (nvim-treesitter.withPlugins (p: [ p.nix p.lua p.kdl p.toml p.json p.bash p.fish p.markdown p.java ]))
     ];
+
+    # Language servers for Nix and Java
+    extraPackages = with pkgs; [ nil jdt-language-server ];
 
     initLua = ''
       -- Basics
@@ -52,6 +56,10 @@
 
       -- Auto-close brackets and quotes
       require("nvim-autopairs").setup({ check_ts = true })
+
+      -- LSP: errors and completion for Nix and Java, shown at the end of the line
+      vim.lsp.enable({ "nil_ls", "jdtls" })
+      vim.diagnostic.config({ virtual_text = true })
 
       -- Use the JSON parser for .jsonc files
       vim.treesitter.language.register("json", "jsonc")

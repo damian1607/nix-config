@@ -5,6 +5,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
+    overwriteBackup = true;
 
     users.damian = {
       imports = [
