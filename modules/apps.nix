@@ -1,13 +1,9 @@
 { pkgs, ... }:
 
 {
-  programs.obs-studio = {
-    enable = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      obs-pipewire-audio-capture  # record audio from single apps
-      obs-vkcapture               # game capture for Vulkan/OpenGL games
-    ];
-  };
+
+  # Lightweight screen-recorder
+  programs.gpu-screen-recorder.ui.enable = true;
 
   # JDK for java development
   programs.java.enable = true;
